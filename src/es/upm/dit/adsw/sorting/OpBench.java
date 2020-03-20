@@ -13,18 +13,19 @@ public class OpBench {
     private static final Random random = new Random();
 
     public static void main(String[] args) {
-//       Diccionario diccionario = new DiccionarioBinario(100000);
-        StringSorter sorter = new InsertionSort();
+ //      StringSorter sorter = new InsertionSort();
+//        StringSorter sorter = new QuickSort2();
+        StringSorter sorter = new MergeSortIterative();
 
         int[] nn = {
-                1000,    // precalentamiento
+                100,    // precalentamiento
                 100, 200, 500,
                 1000, 2000, 5000,
-                10000
+                10000, 20000, 50000
         };
 
         for (int n : nn) {
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 1; i++) {
                 long t = meter(sorter, n);
                 System.out.printf("%s %d%n", n, t);
             }

@@ -14,14 +14,18 @@ public class TimeBench {
        /*
          * Change for different algorithms
          */
-        StringSorter sorter = new MergeSort();
-
+       StringSorter sorter = new MergeSortIterative();
+//    	StringSorter sorter = new QuickSortH();
+//        StringSorter sorter = new QuickSort2();
+//        StringSorter sorter = new SelectionSort();
+//        StringSorter sorter = new InsertionSort();
+//    	StringSorter sorter = new BubbleSort();
         /*
          * Test size
          */
         int[] N = {1000,                //preheating
                 100, 200, 300, 400, 500,
-                1000, 2000, 5000, 10000
+                1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000
         };
 
         for (int n : N) {

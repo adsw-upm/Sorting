@@ -16,10 +16,11 @@ public class TestSort {
 //        sorter = new es.upm.dit.adsw.sorting.InsertionSort();
 //        sorter = new es.upm.dit.adsw.sorting.SelectionSort();
 //        sorter = new es.upm.dit.adsw.sorting.BubbleSort();
-        sorter = new es.upm.dit.adsw.sorting.QuickSort1();
+//        sorter = new es.upm.dit.adsw.sorting.QuickSort1();
 //        sorter = new es.upm.dit.adsw.sorting.QuickSort2();
 //        sorter = new QuickSortH();
-//        sorter = new MergeSort();
+//        sorter = new MergeSortIterative();
+    	sorter = new MergeSortRecursive();
     }
 
     @org.junit.Test

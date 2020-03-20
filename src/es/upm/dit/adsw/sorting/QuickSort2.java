@@ -36,10 +36,10 @@ public class QuickSort2 extends StringSorter {
         }
         swap(data, a, i);  // exchange pivot and data[i]
 
-        for (int jj = a; jj < i + 1; jj++)
-            assert data[i].compareTo(pivot) <= 0;
-        for (int j = i + 1; j < z; j++)
-            assert data[i].compareTo(pivot) >= 0;
+//        for (int jj = a; jj < i + 1; jj++)
+//            assert data[i].compareTo(pivot) <= 0;
+//        for (int j = i + 1; j < z; j++)
+//            assert data[i].compareTo(pivot) >= 0;
         sort(data, a, i);
         sort(data, i+1, z);
     }

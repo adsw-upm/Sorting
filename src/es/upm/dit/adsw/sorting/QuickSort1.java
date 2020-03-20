@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * Quicksort for String
- * <p>
+ * Quicksort for String -- Tony Hoare version
+ *
  * Created by jpuente on 23/1/17.
  */
 public class QuickSort1 extends StringSorter {
@@ -24,22 +24,22 @@ public class QuickSort1 extends StringSorter {
 
         String pivot = data[(a + z) / 2]; // use middle element as pivot
 
-        int left = a;
-        int right = z - 1;
-        while (left <= right) {
-            while (OpMeter.compareTo(data[left], pivot) < 0)
-                left++;
-            while (OpMeter.compareTo(data[right], pivot) > 0)
-                right--;
-            if (left <= right)
-                swap(data, left++, right--);
+        int i = a;
+        int j = z - 1;
+        while (i <= j) {
+            while (OpMeter.compareTo(data[i], pivot) < 0)
+                i++;
+            while (OpMeter.compareTo(data[j], pivot) > 0)
+                j--;
+            if (i <= j)
+                swap(data, i++, j--);
         }
-        for (int i = a; i < right + 1; i++)
-            assert data[i].compareTo(pivot) <= 0;
-        for (int i = left; i < z; i++)
-            assert data[i].compareTo(pivot) >= 0;
-        sort(data, a, right + 1);
-        sort(data, left, z);
+//        for (int i = a; i < j + 1; i++)
+//            assert data[i].compareTo(pivot) <= 0;
+//        for (int i = i; i < z; i++)
+//            assert data[i].compareTo(pivot) >= 0;
+        sort(data, a, j + 1);
+        sort(data, i, z);
     }
 
     /**
